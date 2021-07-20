@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using VesselsApi.Models;
 
 namespace VesselsApi.Controllers {
-	[Route("api/[controller]")]
+	[Route("api/basic")]
     [ApiController]
     public class BasicController : ControllerBase
     {
