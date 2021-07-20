@@ -5,9 +5,14 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VesselsApi", "VesselsApi\VesselsApi.csproj", "{5342CB51-996E-4099-B639-3F1F1FAA65C5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReaderAPI", "ReaderAPI\ReaderAPI.csproj", "{9850DF61-9E53-440C-B3EC-84511A1B17F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReaderApi", "ReaderAPI\ReaderApi.csproj", "{9850DF61-9E53-440C-B3EC-84511A1B17F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refresher", "Refresher\Refresher.csproj", "{EA9C7BCF-048F-4860-B8B1-BC76CD36B998}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Refresher", "Refresher\Refresher.csproj", "{EA9C7BCF-048F-4860-B8B1-BC76CD36B998}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{766048AF-F403-48C7-8075-4BA55C7912CA}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
