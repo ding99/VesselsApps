@@ -12,9 +12,9 @@ Four end-points are provided. The web api was tested by IIS Express host.
 
 #### GET api/basic/location/{vesselID}: Retrieve the location (Latitude, Longitude, Speed and Heading) of a given vessel (vessel Id) from the cache
 
-#### GET api/basic/refresh: Retrieve a list of each vessel’s basic information from the WSF server, and updates the Basic table in the local database. The request will be called by the console application Refresher.
+#### GET api/basic/refresh: Retrieve a list of each vessel’s basic information from the WSF server, and update the Basic table of the local database. The request will be called by the console application Refresher.
 
-#### GET api/basic/cache: Retrieve a list of each vessel’s location information from the WSF server, and updates the local cache. The cache life is set as 9 minutes. The request will be called by the console application Refresher.
+#### GET api/basic/cache: Retrieve a list of each vessel’s location information from the WSF server, and update the local cache. The cache life is set as 9 minutes. The request will be called by the console application Refresher.
 
 
 ## Refresher
@@ -37,17 +37,17 @@ The database name is VesselDb
 Only one table is being used. The table name is Basic which is used to store basic information for vessels.
 
 #### SQL file to create the table named Basic in database VesselDb
-USE [VesselDb]
-GO
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Basic](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[VesselId] [int] NOT NULL,
-	[VesselName] [nvarchar](255) NOT NULL,
-	[Status] [int] NOT NULL,
+USE [VesselDb]  
+GO  
+SET ANSI_NULLS ON  
+GO  
+SET QUOTED_IDENTIFIER ON  
+GO  
+CREATE TABLE [dbo].[Basic](  
+	[Id] [int] IDENTITY(1,1) NOT NULL,  
+	[VesselId] [int] NOT NULL,  
+	[VesselName] [nvarchar](255) NOT NULL,  
+	[Status] [int] NOT NULL,  
  CONSTRAINT [PK_Basic] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
