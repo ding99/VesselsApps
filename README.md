@@ -48,24 +48,24 @@ CREATE TABLE [dbo].[Basic](
 	[VesselId] [int] NOT NULL,  
 	[VesselName] [nvarchar](255) NOT NULL,  
 	[Status] [int] NOT NULL,  
- CONSTRAINT [PK_Basic] PRIMARY KEY CLUSTERED 
-(
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-INSERT INTO [dbo].[Basic]
-           ([VesselId],[VesselName],[Status])
-     VALUES
-           (101,'Vessel01',1)
-GO
-INSERT INTO [dbo].[Basic]
-           ([VesselId],[VesselName],[Status])
-     VALUES
-           (102,'Vessel02',2)
-GO
-INSERT INTO [dbo].[Basic]
-           ([VesselId],[VesselName],[Status])
-     VALUES
-           (103,'Vessel03',1)
-GO
+ CONSTRAINT [PK_Basic] PRIMARY KEY CLUSTERED  
+( 
+	[Id] ASC 
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]  
+) ON [PRIMARY]  
+GO  
+INSERT INTO [dbo].[Basic]  
+           ([VesselId],[VesselName],[Status])  
+     VALUES  
+           (101,'Vessel01',1)  
+GO  
+INSERT INTO [dbo].[Basic]  
+           ([VesselId],[VesselName],[Status])  
+     VALUES  
+           (102,'Vessel02',2)  
+GO  
+INSERT INTO [dbo].[Basic]  
+           ([VesselId],[VesselName],[Status])  
+     VALUES  
+           (103,'Vessel03',1)  
+GO  
