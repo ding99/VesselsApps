@@ -2,10 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json;
-using ReaderAPI;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+
+using ReaderAPI;
 using VesselsApi.Models;
 
 namespace VesselsApi.Controllers {
@@ -24,7 +25,7 @@ namespace VesselsApi.Controllers {
             _context = context;
         }
 
-        // GET: api/Basic/refresh
+        // GET: api/basic/refresh
         [HttpGet("refresh")]
         public async Task<IActionResult> GetBasicRefresh() {
 
@@ -36,10 +37,10 @@ namespace VesselsApi.Controllers {
                 _context.SaveChanges();
             }
 
-            return NoContent();
+            return Ok();
         }
 
-        // GET: api/Basic/cache
+        // GET: api/basic/cache
         [HttpGet("cache")]
         public async Task<IActionResult> GetLocations() {
 
@@ -58,13 +59,13 @@ namespace VesselsApi.Controllers {
             return Ok();
         }
 
-        // GET: api/Basic
+        // GET: api/basic
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Basic>>> Getbasic() {
             return await _context.basic.ToListAsync();
         }
 
-        // GET: api/Basic/location/18
+        // GET: api/basic/location/18
         [HttpGet("location/{id}")]
         public ActionResult<Position> GetPosition(int id) {
             Position p;
