@@ -16,7 +16,7 @@ Four end-points are provided. The web api was tested by IIS Express host.
 
 #### GET api/basic/cache: Retrieve a list of each vessel’s location information from the WSF server, and update the local cache. The cache life is set as 9 minutes. The request will be called by the console application Refresher.
 
-### NOTICE: I hard code the Web API http port number as 42224. I am not sure if the port will be changed in other machine or not. 
+- NOTICE: I hard code the Web API http port number as 42224. I am not sure if the port will be changed in other machine or not. 
 
 ## Refresher
 #### This is a .NET Core console application.
