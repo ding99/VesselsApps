@@ -2,19 +2,19 @@
  Get Vessels Information
 
 #### VesselsApps is composed of a Web API named VesselsApi and a console application named Refresher.
-#### It was implemented using .NET Core 5.0 by Visual Stuido Community 2019, Version 16.10.3.
+#### It was implemented using .NET 5.0 by Visual Stuido Community 2019, Version 16.10.3.
 #### There are four projects.
 
 ## VesselsApi (ASP.NET Core Web API)
 Four end-points are provided. The web api was tested by IIS Express host.
 
-#### GET api/baisc: Retrieve a list of each vessel’s basic information (ID, Name and Status) from the local database VesselDb (table: Basic)
+#### GET api/baisc: Retrieve a list of each vesselâ€™s basic information (ID, Name and Status) from the local database VesselDb (table: Basic)
 
 #### GET api/basic/location/{vesselID}: Retrieve the location (Latitude, Longitude, Speed and Heading) of a given vessel (vessel Id) from the cache
 
-#### GET api/basic/refresh: Retrieve a list of each vessel’s basic information from the WSF server, and update the Basic table of the local database. The request will be called by the console application Refresher.
+#### GET api/basic/refresh: Retrieve a list of each vesselâ€™s basic information from the WSF server, and update the Basic table of the local database. The request will be called by the console application Refresher.
 
-#### GET api/basic/cache: Retrieve a list of each vessel’s location information from the WSF server, and update the local cache. The cache life is set as 9 minutes. The request will be called by the console application Refresher.
+#### GET api/basic/cache: Retrieve a list of each vesselâ€™s location information from the WSF server, and update the local cache. The cache life is set as 9 minutes. The request will be called by the console application Refresher.
 
 - NOTICE: I hard code the Web API http port number as 42224. I am not sure if the port will be changed in other machine or not. 
 
