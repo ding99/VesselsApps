@@ -52,7 +52,7 @@ namespace VesselsApi.Controllers {
 				_cache.Set(
 					location.VesselID,
 					JsonConvert.DeserializeObject<Position>(JsonConvert.SerializeObject(location)),
-					new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromMinutes(10))
+					new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromMinutes(9))
 				);
 			}
 
