@@ -12,12 +12,12 @@ namespace Refresher {
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("Timers");
 
-			Timer basic = new Timer(50000);
+			Timer basic = new Timer(3600000);
 			basic.Elapsed += OnBasic;
 			basic.AutoReset = true;
 			basic.Enabled = true;
 
-			Timer location = new Timer(20000);
+			Timer location = new Timer(300000);
 			location.Elapsed += OnLocation;
 			location.AutoReset = true;
 			location.Enabled = true;
