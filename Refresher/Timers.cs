@@ -12,6 +12,8 @@ namespace Refresher {
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("Timers");
 
+			this.Init();
+
 			Timer basic = new Timer(3600000);
 			basic.Elapsed += OnBasic;
 			basic.AutoReset = true;
@@ -32,6 +34,24 @@ namespace Refresher {
 			location.Dispose();
 
 			Console.ResetColor();
+		}
+
+		private void Init() {
+			StringBuilder url = new StringBuilder(baseUrl);
+			url.Append("refresh");
+
+			using (var client = new HttpClient()) {
+				var response = client.GetAsync(url.ToString()).GetAwaiter().GetResult();
+				Console.WriteLine($"Updated DB [{url}], Success Status: [{response.IsSuccessStatusCode}]");
+			}
+
+			url = new StringBuilder(baseUrl);
+			url.Append("cache");
+
+			using (var client = new HttpClient()) {
+				var response = client.GetAsync(url.ToString()).GetAwaiter().GetResult();
+				Console.WriteLine($"Set Cache [{url}], Success Status: [{response.IsSuccessStatusCode}]");
+			}
 		}
 
 		private void OnBasic(object source, ElapsedEventArgs e) {
